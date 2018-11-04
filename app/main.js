@@ -29,7 +29,7 @@ const updateMenu = () => {
       accelerator: 'CommandOrControl+Shift+C'
     },
     { type: 'separator' },
-    ...clippings.map((clipping, index) => { label: clipping }),
+    ...clippings.map((clipping, index) => ({ label: clipping })), // the parser doesn't interpret the two braces as an object literal, but as a block statement.
     { type: 'separator' },
     {
       label: 'Quit',
